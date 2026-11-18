@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mabruenia Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="xp-window">
+    <div class="xp-titlebar">
+      <div class="title-left">
+        <span class="app-icon">🌐</span>
+        <span class="title-text">Mabruenia Online - Explorer Edition</span>
+      </div>
+      <div class="window-controls">
+        <button id="min-btn" class="xp-btn" title="Minimize" type="button">_</button>
+        <button id="max-btn" class="xp-btn" title="Maximize" type="button">□</button>
+        <button id="close-btn" class="xp-btn close" title="Close" type="button">X</button>
+      </div>
+    </div>
+
+    <div class="retro-toolbar">
+      <button id="back-btn" class="nav-btn" type="button">◄ Back</button>
+      <button id="fwd-btn" class="nav-btn" type="button">Forward ►</button>
+      <button id="reload-btn" class="nav-btn" type="button">↻ Reload</button>
+      <button id="home-btn" class="nav-btn" type="button">⌂ Home</button>
+      <div class="address-wrapper">
+        <span class="address-label">Address:</span>
+        <input type="text" id="url-bar" value="mabruenia://welcome" autocomplete="off">
+        <button id="go-btn" class="nav-btn" type="button">Go</button>
+      </div>
+      <div id="throbber" class="throbber">🌍</div>
+    </div>
+
+    <div class="bookmarks-bar" id="bookmarks-bar">
+      <span class="links-label">Links ►</span>
+      <div id="bookmarks-list" class="bookmarks-list"></div>
+      <button id="add-bookmark-btn" class="bookmark-btn add-btn" title="Bookmark current page" type="button">★ + Add</button>
+    </div>
+
+    <div class="tabs-bar" id="tabs-bar">
+      <div id="tabs-list" class="tabs-list"></div>
+      <button id="new-tab-btn" class="new-tab-btn" title="Open New Tab" type="button">+</button>
+    </div>
+
+    <div id="viewports-container" class="viewports-container"></div>
+
+    <div class="retro-statusbar">
+      <span id="status-text">Welcome to Mabruenia Online!</span>
+      <div class="status-right">
+        <span class="status-box">🔒</span>
+        <span class="status-box">🌐 Mabruenia Online Zone</span>
+      </div>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

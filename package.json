@@ -1,0 +1,34 @@
+
+{
+  "name": "retro-xp-browser",
+  "version": "1.0.0",
+  "description": "Mabruenia Online retro desktop browser",
+  "main": "main.js",
+  "build": {
+    "appId": "com.mabruenia.online",
+    "productName": "Mabruenia Online",
+    "directories": {
+      "buildResources": "build"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Mabruenia Online"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis",
+    "pack": "electron-builder --dir"
+  },
+  "devDependencies": {
+    "electron": "^45.3.4",
+    "electron-builder": "^26.18.0"
+  }
+}
+
