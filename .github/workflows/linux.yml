@@ -1,5 +1,16 @@
+
+name: Build Linux AppImage
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Mabruenia Online
+    runs-on: ubuntu-22.04
+
     steps:
-      - name: Get source code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Node.js
@@ -18,3 +29,5 @@
         with:
           name: Mabruenia-Online-Linux
           path: dist/*.AppImage
+          if-no-files-found: error
+
