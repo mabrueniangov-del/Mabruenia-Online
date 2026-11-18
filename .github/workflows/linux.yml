@@ -1,0 +1,20 @@
+    steps:
+      - name: Get source code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build AppImage
+        run: npx electron-builder --linux AppImage --x64
+
+      - name: Upload AppImage
+        uses: actions/upload-artifact@v4
+        with:
+          name: Mabruenia-Online-Linux
+          path: dist/*.AppImage
